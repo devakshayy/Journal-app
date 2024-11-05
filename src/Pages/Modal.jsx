@@ -5,8 +5,8 @@ import {v4 as getID} from "uuid";
 
 const Modal = ({isVisible,onClose,note,createNote,updateNote}) => {
   
-  const [title,setTitle] = useState(note? note?.title :"");
-  const [desc,setDesc] = useState(note? note?.desc : "" );
+  const [title,setTitle] = useState(note? note?.title :"");    
+  const [desc,setDesc] = useState(note? note?.desc :"");
 
   const clearInputs = () =>{
     setTitle("");
@@ -77,7 +77,7 @@ const Modal = ({isVisible,onClose,note,createNote,updateNote}) => {
               type="text"
               text="uppercase"
               maxLength={30}
-              value={title}         
+              value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <Textarea

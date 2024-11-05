@@ -36,12 +36,12 @@ const HomePage = () => {
   };
   
   const handleOnUpdate = (note) => {
-      setCurrentNotes(note),
+      setCurrentNotes(note);
       setShowModal(true);
   }
   const handleUpdateNote = (note) => {
     if(note){
-      const tempNotes = [...notes.map(n => n.id === note.id ? note : n)];        /* UpdateNote fun */
+      const tempNotes = [...notes.map((n) => (n.id === note.id ? note : n))];      /* UpdateNote fun */
       setNotes(tempNotes);
       setCurrentNotes(null);
       saveNotes(tempNotes);
