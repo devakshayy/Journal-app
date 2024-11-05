@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logooo 1.png";
 import { Link } from "react-router-dom";
 
-const Header = ({setOpen}) => {
+const Header = ({modalOpen}) => {
   return (
     <div className="max-w-full h-[93px] bg-gradient-to-t from-[#7C00D7] to-[#410071] flex items-center justify-between">
        <Link to="/">
@@ -16,7 +16,7 @@ const Header = ({setOpen}) => {
           </button>
         </Link>
         
-          <button onClick={() => setOpen(true)}>
+          <button onClick={() =>modalOpen()}>
             <h5>CREATE</h5>
           </button>
        
