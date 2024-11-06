@@ -105,7 +105,15 @@ const HomePage = () => {
             placeholder="Search journal entries..."
             onChange={(e) => setSearch(e.target.value)}
           />
-          <select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
+
+          <select value={sortOption} 
+                  onChange={(e) => setSortOption(e.target.value)}
+                  className="md:w-[210px] w-[360px] h-[60px] bg-white  
+                   text-[#AF3EFF] border border-[#AF3EFF] rounded-[15px] 
+                   font-semibold hover:bg-purple-100 flex justify-center
+                   focus:outline-none px-4 "
+                   
+                  >
             <option value="newest">Newest First</option>
             <option value="oldest">Oldest First</option>
             <option value="title">By Title</option>

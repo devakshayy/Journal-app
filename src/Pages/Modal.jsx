@@ -63,6 +63,7 @@ const Modal = ({isVisible,onClose,note,createNote,updateNote}) => {
                 height="30s"                                                       /* CLOSE BUTTON */
                 src="https://img.icons8.com/ios-filled/50/delete-sign--v1.png"
                 alt="delete-sign--v1"
+                type="submit"
                 onClick={() =>onClose()}
               />
             </button>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const JouranalEntryItem = ({onPreview,note, onUpdate,onDelete}) => {
+const JouranalEntryItem = ({onPreview,note,onUpdate,onDelete}) => {
   return (
     <div
       className="bg-[#FAF4FF] w-[360px] md:w-[940px] 
