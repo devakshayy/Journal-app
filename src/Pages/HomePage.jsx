@@ -18,10 +18,16 @@ const HomePage = () => {
   let filteredNotes = [];
   
 
+  // useEffect(() => {
+  //    const tempNotes = JSON.parse(localStorage.getItem("notes"));                 /* Get itmes from local storage */
+  //    tempNotes && setNotes(tempNotes);
+  // },[]);
   useEffect(() => {
-     const tempNotes = JSON.parse(localStorage.getItem("notes"));                 /* Get itmes from local storage */
-     tempNotes && setNotes(tempNotes);
-  },[]);
+    const storedNotes = localStorage.getItem("notes");
+    const tempNotes = storedNotes ? JSON.parse(storedNotes) : [];  
+    setNotes(tempNotes);
+  }, []);
+  
   
   const saveNotes = (items) => {
      localStorage.setItem("notes",JSON.stringify(items));                         /* SetItems in local Storage  */
