@@ -22,6 +22,7 @@ const HomePage = () => {
   //    const tempNotes = JSON.parse(localStorage.getItem("notes"));                 /* Get itmes from local storage */
   //    tempNotes && setNotes(tempNotes);
   // },[]);
+ 
   useEffect(() => {
     const storedNotes = localStorage.getItem("notes");
     const tempNotes = storedNotes ? JSON.parse(storedNotes) : [];  
